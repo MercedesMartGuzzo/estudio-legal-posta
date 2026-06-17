@@ -24,7 +24,9 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [isOpen]);
 
   const closeMenu = () => setIsOpen(false);
@@ -33,16 +35,16 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
         isScrolled
-          ? "bg-[var(--background)]/90 backdrop-blur-md border-b border-[var(--border)]"
-          : "bg-transparent border-b border-transparent"
+          ? "bg-[var(--background)] border-b border-[var(--border)] lg:bg-[var(--background)]/90 lg:backdrop-blur-md"
+          : "border-b border-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between gap-8 px-4 py-6 md:px-16">
-        {/* REQUISITO: El logo se oculta con 'hidden' cuando el menú está abierto */}
+        {/* Logo: siempre ocupa su lugar en el flujo (no usa 'hidden'), se oculta con opacidad para que el layout no salte */}
         <Link
           href="#inicio"
-          className={`font-heading text-2xl font-bold text-[var(--primary)] tracking-tight shrink-0 leading-none ${
-            isOpen ? "hidden" : "block"
+          className={`font-heading text-2xl font-bold text-[var(--primary)] tracking-tight shrink-0 leading-none transition-opacity duration-150 ${
+            isOpen ? "pointer-events-none opacity-0" : "opacity-100"
           }`}
         >
           Estudio Posta
@@ -74,7 +76,7 @@ export default function Navbar() {
           type="button"
           onClick={() => setIsOpen(true)}
           aria-label="Abrir menú"
-          className="flex items-center justify-center lg:hidden"
+          className="flex shrink-0 items-center justify-center lg:hidden"
         >
           <Menu size={32} color="var(--foreground)" />
         </button>
@@ -83,7 +85,9 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 z-50 bg-[var(--background)] transition-opacity duration-300 lg:hidden ${
-          isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+          isOpen
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
         }`}
       >
         {/* Header del menú móvil */}
@@ -94,7 +98,7 @@ export default function Navbar() {
         </div>
 
         {/* Contenedor centrado */}
-        <div className="flex h-[70vh] flex-col justify-center items-center">
+        <div className="flex h-[70vh] flex-col items-center justify-center">
           <ul className="flex flex-col items-center gap-8 px-4">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
