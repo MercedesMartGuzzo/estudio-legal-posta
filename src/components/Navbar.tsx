@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react"; // 1. Importamos los iconos
 
 const NAV_LINKS = [
   { label: "Inicio", href: "#inicio" },
@@ -23,9 +24,7 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
   const closeMenu = () => setIsOpen(false);
@@ -41,11 +40,13 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between gap-8 px-4 py-6 md:px-16">
         <Link
           href="#inicio"
-          className="font-heading text-lg lg:text-2xl font-bold text-[var(--primary)] tracking-tight shrink-0 leading-none"
+          // 2. Aumenté el tamaño de fuente para mobile (text-2xl)
+          className="font-heading text-2xl md:text-2xl font-bold text-[var(--primary)] tracking-tight shrink-0 leading-none"
         >
           Estudio Posta
         </Link>
 
+        {/* Desktop Menu */}
         <ul className="hidden flex-1 items-center justify-center gap-8 lg:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
@@ -66,65 +67,58 @@ export default function Navbar() {
           Solicitar Consulta
         </Link>
 
+        {/* 3. Botón Abrir con Icono Lucide */}
         <button
           type="button"
           onClick={() => setIsOpen(true)}
           aria-label="Abrir menú"
-          aria-expanded={isOpen}
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className="flex items-center justify-center lg:hidden"
         >
-          <span className="h-[1.5px] w-6 bg-[var(--foreground)]" />
-          <span className="h-[1.5px] w-6 bg-[var(--foreground)]" />
-          <span className="h-[1.5px] w-4 self-end bg-[var(--foreground)]" />
+          <Menu size={32} color="var(--foreground)" />
         </button>
       </nav>
 
+      {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 z-50 bg-[var(--background)] transition-opacity duration-300 lg:hidden ${
-          isOpen
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
+          isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
         <div className="flex items-center justify-between px-4 py-6">
-          <span className="font-heading text-lg font-bold text-[var(--primary)]">
+          <span className="font-heading text-2xl font-bold text-[var(--primary)]">
             Estudio Posta
           </span>
-          <button
-            type="button"
-            onClick={closeMenu}
-            aria-label="Cerrar menú"
-            className="flex h-10 w-10 items-center justify-center"
-          >
-            <span className="relative block h-5 w-5">
-              <span className="absolute left-1/2 top-1/2 h-[1.5px] w-6 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-[var(--foreground)]" />
-              <span className="absolute left-1/2 top-1/2 h-[1.5px] w-6 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-[var(--foreground)]" />
-            </span>
+          {/* 3. Botón Cerrar con Icono Lucide */}
+          <button type="button" onClick={closeMenu} aria-label="Cerrar menú">
+            <X size={32} color="var(--foreground)" />
           </button>
         </div>
 
-        <ul className="mt-12 flex flex-col items-center gap-8 px-4">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                onClick={closeMenu}
-                className="font-heading text-2xl text-[var(--on-surface)]"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {/* 4. Contenedor centrado verticalmente */}
+        <div className="flex h-[80vh] flex-col justify-center items-center">
+          <ul className="flex flex-col items-center gap-8 px-4">
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  onClick={closeMenu}
+                  className="font-heading text-3xl text-[var(--on-surface)]"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-        <div className="mt-12 flex justify-center px-4">
-          <Link
-            href="#contacto"
-            onClick={closeMenu}
-            className="rounded-md border-2 border-[var(--primary)] bg-[var(--primary)] px-8 py-3 font-body text-sm font-medium text-white [letter-spacing:1px] transition-colors hover:bg-white hover:text-[var(--primary)]"
-          >
-            Solicitar Consulta
-          </Link>
+          <div className="mt-12">
+            <Link
+              href="#contacto"
+              onClick={closeMenu}
+              className="rounded-md border-2 border-[var(--primary)] bg-[var(--primary)] px-8 py-3 font-body text-lg font-medium text-white transition-colors hover:bg-white hover:text-[var(--primary)]"
+            >
+              Solicitar Consulta
+            </Link>
+          </div>
         </div>
       </div>
     </header>

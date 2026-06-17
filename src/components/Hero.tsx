@@ -82,7 +82,7 @@ export default function Hero() {
           >
             <div className="w-full max-w-md md:max-w-lg lg:max-w-lg relative h-64 md:h-80 lg:h-96">
               <Image
-                src="/hero-estudio.png"
+                src="/prueba-hero.png"
                 alt="Estudio Jurídico"
                 fill
                 className="object-contain"
