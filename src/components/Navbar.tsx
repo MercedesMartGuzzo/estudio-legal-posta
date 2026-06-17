@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react"; // 1. Importamos los iconos
+import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "Inicio", href: "#inicio" },
@@ -38,10 +38,12 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between gap-8 px-4 py-6 md:px-16">
+        {/* REQUISITO: El logo se oculta con 'hidden' cuando el menú está abierto */}
         <Link
           href="#inicio"
-          // 2. Aumenté el tamaño de fuente para mobile (text-2xl)
-          className="font-heading text-2xl md:text-2xl font-bold text-[var(--primary)] tracking-tight shrink-0 leading-none"
+          className={`font-heading text-2xl font-bold text-[var(--primary)] tracking-tight shrink-0 leading-none ${
+            isOpen ? "hidden" : "block"
+          }`}
         >
           Estudio Posta
         </Link>
@@ -67,7 +69,7 @@ export default function Navbar() {
           Solicitar Consulta
         </Link>
 
-        {/* 3. Botón Abrir con Icono Lucide */}
+        {/* Botón Abrir */}
         <button
           type="button"
           onClick={() => setIsOpen(true)}
@@ -84,18 +86,15 @@ export default function Navbar() {
           isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <div className="flex items-center justify-between px-4 py-6">
-          <span className="font-heading text-2xl font-bold text-[var(--primary)]">
-            Estudio Posta
-          </span>
-          {/* 3. Botón Cerrar con Icono Lucide */}
+        {/* Header del menú móvil */}
+        <div className="flex items-center justify-end px-4 py-6">
           <button type="button" onClick={closeMenu} aria-label="Cerrar menú">
             <X size={32} color="var(--foreground)" />
           </button>
         </div>
 
-        {/* 4. Contenedor centrado verticalmente */}
-        <div className="flex h-[80vh] flex-col justify-center items-center">
+        {/* Contenedor centrado */}
+        <div className="flex h-[70vh] flex-col justify-center items-center">
           <ul className="flex flex-col items-center gap-8 px-4">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
