@@ -49,10 +49,10 @@ export default function WhyChooseUs() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="mx-auto max-w-[800px] text-center"
       >
-        <p className="font-body text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
+        <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           ¿Por qué elegirnos?
         </p>
-        <h2 className="font-heading mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
           La diferencia está en el{" "}
           <span className="text-[var(--primary)]">enfoque</span>
         </h2>
@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
                   {card.title}
                 </h3>
               </div>
-              <p className="font-body text-[15px] leading-[26px] text-[var(--foreground)]">
+              <p className="text-[15px] leading-[26px] text-[var(--foreground)]">
                 {card.description}
               </p>
             </motion.div>

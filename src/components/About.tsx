@@ -56,11 +56,11 @@ export default function About() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="mx-auto max-w-[800px] text-center"
       >
-        <p className="font-body text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
+        <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           Quiénes Somos
         </p>
 
-        <h2 className="font-heading mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className=" mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
           Un estudio con{" "}
           <span className="text-[var(--primary)]">visión estratégica</span> y
           trayectoria comprobada
@@ -76,7 +76,7 @@ export default function About() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="flex flex-col gap-6"
         >
-          <p className="font-body text-base leading-[28px] text-[var(--foreground)] md:text-lg md:mt-10">
+          <p className="text-base leading-[28px] text-[var(--foreground)] md:text-lg md:mt-10">
             Somos un estudio jurídico dedicado a brindar asesoramiento legal
             integral a empresas, emprendedores, cooperativas y personas
             físicas que operan en sectores dinámicos de la economía
@@ -85,7 +85,7 @@ export default function About() {
             los negocios.
           </p>
 
-          <p className="font-body text-base leading-[28px] text-[var(--foreground)] md:text-lg">
+          <p className="text-base leading-[28px] text-[var(--foreground)] md:text-lg">
             Trabajamos de manera cercana con nuestros clientes, entendiendo
             que cada situación requiere soluciones a medida. No ofrecemos
             respuestas genéricas: analizamos cada caso con dedicación,
@@ -101,7 +101,7 @@ export default function About() {
           variants={fadeUp}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
         >
-          <h3 className="font-heading font-bold text-2xl text-[var(--primary)]">
+          <h3 className="font-bold text-2xl text-[var(--primary)]">
             Nuestros Valores
           </h3>
 
@@ -130,7 +130,7 @@ export default function About() {
                     />
                   </div>
 
-                  <p className="font-body text-[15px] leading-[24px] text-[var(--foreground)]">
+                  <p className="text-[15px] leading-[24px] text-[var(--foreground)]">
                     <span className="font-bold">{value.label}</span>{" "}
                     {value.text}
                   </p>

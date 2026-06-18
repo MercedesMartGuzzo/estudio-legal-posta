@@ -50,7 +50,7 @@ export default function Hero() {
           {/* Content */}
           <div className="flex flex-col gap-6 md:gap-8">
             <motion.div className="space-y-3" variants={itemVariants}>
-              <h1 className="font-[--font-heading] text-4xl md:text-5xl lg:text-5xl text-[#163a2d] leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-5xl text-[#163a2d] leading-tight">
                 Estudio{" "}
                 <span className="text-[#785a00]">
                   Jurídico
@@ -59,7 +59,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.p
-              className="font-[--font-body] text-base md:text-lg text-[#454240] leading-relaxed"
+              className=" text-base md:text-lg text-[#454240] leading-relaxed"
               variants={itemVariants}
             >
               Asesoramiento legal de excelencia en derecho comercial, societario, turismo, medios y propiedad intelectual. Soluciones jurídicas concretas para personas y empresas en Argentina.
@@ -67,10 +67,10 @@ export default function Hero() {
 
             {/* CTAs */}
             <motion.div className="flex flex-col sm:flex-row gap-4 pt-2" variants={itemVariants}>
-              <button className="px-8 py-3 border-2 border-[#1f4d3d] bg-[#1f4d3d] text-white font-[--font-body] font-medium rounded-lg [letter-spacing:1px] hover:bg-white hover:text-[#1f4d3d] transition-colors shadow-sm">
+              <button className="px-8 py-3 border-2 border-[#1f4d3d] bg-[#1f4d3d] text-white font-medium rounded-lg [letter-spacing:1px] hover:bg-white hover:text-[#1f4d3d] transition-colors shadow-sm">
                 Solicitar Consulta
               </button>
-              <button className="px-8 py-3 border-2 border-[#1f4d3d] text-[#1f4d3d] font-[--font-body] font-medium rounded-lg [letter-spacing:1px] hover:bg-[#1f4d3d] hover:text-white transition-colors">
+              <button className="px-8 py-3 border-2 border-[#1f4d3d] text-[#1f4d3d] font-medium rounded-lg [letter-spacing:1px] hover:bg-[#1f4d3d] hover:text-white transition-colors">
                 Nuestras Áreas
               </button>
             </motion.div>

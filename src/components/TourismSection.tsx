@@ -45,10 +45,10 @@ export default function TourismSection() {
         variants={fadeUp}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="font-heading text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
           Empresas de <span className="text-[var(--primary)]">Turismo</span>
         </h2>
-        <p className="font-body mt-5 max-w-[760px] text-base leading-[28px] text-[var(--foreground)] md:text-lg">
+        <p className="mt-5 max-w-[760px] text-base leading-[28px] text-[var(--foreground)] md:text-lg">
           El sector turístico en Argentina está regulado por un conjunto
           normativo específico que incluye la{" "}
           <span className="font-bold">Ley Nacional de Turismo 25.997</span>,
@@ -86,7 +86,7 @@ export default function TourismSection() {
                   {feature.title}
                 </h3>
               </div>
-              <p className="font-body mt-4 text-[15px] leading-[24px] text-[var(--foreground)]">
+              <p className="mt-4 text-[15px] leading-[24px] text-[var(--foreground)]">
                 {feature.description}
               </p>
             </motion.div>

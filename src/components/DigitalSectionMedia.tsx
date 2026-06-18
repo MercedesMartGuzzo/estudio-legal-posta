@@ -48,11 +48,11 @@ export default function DigitalSectionMedia() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="mx-auto max-w-[800px] text-center"
       >
-        <p className="font-body text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
+        <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           Área Especializada
         </p>
 
-        <h2 className="font-heading mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
           Medios, Entretenimiento{" "}
           <span className="text-[var(--primary)]">& Cultura Digital</span>
         </h2>
@@ -68,7 +68,7 @@ export default function DigitalSectionMedia() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="order-2 flex flex-col gap-6 lg:order-1"
         >
-          <p className="font-body text-base leading-[28px] text-[var(--foreground)] md:text-lg">
+          <p className="text-base leading-[28px] text-[var(--foreground)] md:text-lg">
             La industria de los medios y el entretenimiento opera en una
             intersección única entre el derecho de autor, los contratos
             artísticos, la regulación de radiodifusión y el derecho digital.
@@ -76,7 +76,7 @@ export default function DigitalSectionMedia() {
             de comunicación y plataformas de streaming.
           </p>
 
-          <p className="font-body text-base leading-[28px] text-[var(--foreground)] md:text-lg">
+          <p className="text-base leading-[28px] text-[var(--foreground)] md:text-lg">
             En un entorno donde el contenido digital se monetiza a escala
             global, contar con una estructura jurídica adecuada es clave para
             proteger creaciones, negociar contratos equitativos y cumplir con
@@ -110,7 +110,7 @@ export default function DigitalSectionMedia() {
                     strokeWidth={2}
                   />
 
-                  <p className="font-body text-[15px] leading-[24px] text-[var(--foreground)]">
+                  <p className="text-[15px] leading-[24px] text-[var(--foreground)]">
                     {item.text}
                   </p>
                 </motion.li>
@@ -164,7 +164,7 @@ export default function DigitalSectionMedia() {
                     strokeWidth={2}
                   />
 
-                  <p className="font-body text-[15px] leading-[24px] text-[var(--foreground)]">
+                  <p className="text-[15px] leading-[24px] text-[var(--foreground)]">
                     {item.text}
                   </p>
                 </motion.li>
@@ -200,7 +200,7 @@ export default function DigitalSectionMedia() {
                   strokeWidth={2}
                 />
 
-                <p className="font-body text-[15px] leading-[24px] text-[var(--foreground)]">
+                <p className="text-[15px] leading-[24px] text-[var(--foreground)]">
                   {item.text}
                 </p>
               </motion.li>

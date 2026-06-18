@@ -94,14 +94,14 @@ export default function Contact() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="mx-auto max-w-[680px] text-center"
       >
-        <p className="font-body text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
+        <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           Contacto
         </p>
-        <h2 className="font-heading mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
           Consulte con{" "}
           <span className="text-[var(--primary)]">nuestro equipo</span>
         </h2>
-        <p className="font-body mt-4 text-base leading-[28px] text-[var(--foreground)]">
+        <p className="mt-4 text-base leading-[28px] text-[var(--foreground)]">
           Complete el formulario y un abogado especializado se comunicará con usted
           dentro de las 24 horas hábiles para coordinar una consulta inicial.
         </p>
@@ -117,23 +117,23 @@ export default function Contact() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="rounded-xl border border-[var(--border)] bg-[var(--surface-alt)] p-8 md:p-10"
         >
-          <h3 className="font-heading text-xl text-[var(--on-surface)]">
+          <h3 className="text-xl text-[var(--on-surface)]">
             Formulario de Consulta
           </h3>
 
           {submitted ? (
             <div className="mt-8 flex flex-col items-center gap-4 py-8 text-center">
               <CheckCircle className="h-12 w-12 text-[var(--primary)]" strokeWidth={1.5} />
-              <p className="font-heading text-xl text-[var(--on-surface)]">
+              <p className="text-xl text-[var(--on-surface)]">
                 ¡Consulta enviada!
               </p>
-              <p className="font-body text-sm text-[var(--foreground)]">
+              <p className="text-sm text-[var(--foreground)]">
                 Nos comunicaremos con usted dentro de las 24 horas hábiles.
               </p>
               <button
                 type="button"
                 onClick={() => setSubmitted(false)}
-                className="mt-2 font-body text-sm text-[var(--primary)] underline underline-offset-4"
+                className="mt-2 text-sm text-[var(--primary)] underline underline-offset-4"
               >
                 Enviar otra consulta
               </button>
@@ -141,7 +141,7 @@ export default function Contact() {
           ) : (
             <form onSubmit={handleSubmit(onSubmit)} className="mt-6 flex flex-col gap-5">
               <div>
-                <label className="font-body mb-1.5 block text-sm font-bold text-[var(--on-surface)]">
+                <label className="mb-1.5 block text-sm font-bold text-[var(--on-surface)]">
                   Nombre completo
                 </label>
                 <input
@@ -150,12 +150,12 @@ export default function Contact() {
                   className={inputBase}
                 />
                 {errors.nombre && (
-                  <p className="font-body mt-1 text-xs text-red-500">{errors.nombre.message}</p>
+                  <p className="mt-1 text-xs text-red-500">{errors.nombre.message}</p>
                 )}
               </div>
 
               <div>
-                <label className="font-body mb-1.5 block text-sm font-bold text-[var(--on-surface)]">
+                <label className="mb-1.5 block text-sm font-bold text-[var(--on-surface)]">
                   Correo electrónico
                 </label>
                 <input
@@ -165,12 +165,12 @@ export default function Contact() {
                   className={inputBase}
                 />
                 {errors.email && (
-                  <p className="font-body mt-1 text-xs text-red-500">{errors.email.message}</p>
+                  <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>
                 )}
               </div>
 
               <div>
-                <label className="font-body mb-1.5 block text-sm font-bold text-[var(--on-surface)]">
+                <label className="mb-1.5 block text-sm font-bold text-[var(--on-surface)]">
                   Teléfono / WhatsApp
                 </label>
                 <input
@@ -179,12 +179,12 @@ export default function Contact() {
                   className={inputBase}
                 />
                 {errors.telefono && (
-                  <p className="font-body mt-1 text-xs text-red-500">{errors.telefono.message}</p>
+                  <p className="mt-1 text-xs text-red-500">{errors.telefono.message}</p>
                 )}
               </div>
 
               <div>
-                <label className="font-body mb-1.5 block text-sm font-bold text-[var(--on-surface)]">
+                <label className="mb-1.5 block text-sm font-bold text-[var(--on-surface)]">
                   Área de consulta
                 </label>
                 <select {...register("area")} className={inputBase}>
@@ -194,12 +194,12 @@ export default function Contact() {
                   ))}
                 </select>
                 {errors.area && (
-                  <p className="font-body mt-1 text-xs text-red-500">{errors.area.message}</p>
+                  <p className="mt-1 text-xs text-red-500">{errors.area.message}</p>
                 )}
               </div>
 
               <div>
-                <label className="font-body mb-1.5 block text-sm font-bold text-[var(--on-surface)]">
+                <label className="mb-1.5 block text-sm font-bold text-[var(--on-surface)]">
                   Descripción de su consulta
                 </label>
                 <textarea
@@ -209,12 +209,12 @@ export default function Contact() {
                   className={`${inputBase} resize-none`}
                 />
                 {errors.mensaje && (
-                  <p className="font-body mt-1 text-xs text-red-500">{errors.mensaje.message}</p>
+                  <p className="mt-1 text-xs text-red-500">{errors.mensaje.message}</p>
                 )}
               </div>
 
               {serverError && (
-                <p className="font-body text-sm text-red-500">
+                <p className="text-sm text-red-500">
                   Ocurrió un error al enviar. Intentá de nuevo o escribinos directamente.
                 </p>
               )}
@@ -222,7 +222,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="mt-2 rounded-md bg-[var(--primary)] px-6 py-3 font-body text-sm font-medium text-white transition-colors duration-200 hover:bg-[var(--primary-light)] disabled:opacity-60"
+                className="mt-2 rounded-md bg-[var(--primary)] px-6 py-3 text-sm font-medium text-white transition-colors duration-200 hover:bg-[var(--primary-light)] disabled:opacity-60"
               >
                 {isSubmitting ? "Enviando..." : "Enviar Consulta"}
               </button>
@@ -240,7 +240,7 @@ export default function Contact() {
           className="flex flex-col gap-8"
         >
           <div>
-            <h3 className="font-heading text-xl text-[var(--on-surface)]">
+            <h3 className="text-xl text-[var(--on-surface)]">
               Información de Contacto
             </h3>
             <div className="mt-6 flex flex-col gap-6">
@@ -251,9 +251,9 @@ export default function Contact() {
                     strokeWidth={1.75}
                   />
                   <div>
-                    <p className="font-body text-sm font-bold text-[var(--on-surface)]">{label}</p>
+                    <p className="text-sm font-bold text-[var(--on-surface)]">{label}</p>
                     {lines.map((line) => (
-                      <p key={line} className="font-body text-sm text-[var(--foreground)]">{line}</p>
+                      <p key={line} className="text-sm text-[var(--foreground)]">{line}</p>
                     ))}
                   </div>
                 </div>
@@ -262,14 +262,14 @@ export default function Contact() {
           </div>
 
           <div className="border-t border-[var(--border)] pt-8">
-            <h3 className="font-heading text-xl text-[var(--on-surface)]">
+            <h3 className="text-xl text-[var(--on-surface)]">
               Horario de Atención
             </h3>
             <div className="mt-4 flex flex-col gap-1">
-              <p className="font-body text-sm text-[var(--foreground)]">
+              <p className="text-sm text-[var(--foreground)]">
                 Lunes a viernes: 9:00 a 18:00 hs
               </p>
-              <p className="font-body text-sm text-[var(--foreground)]">
+              <p className="text-sm text-[var(--foreground)]">
                 Sábados: 9:00 a 13:00 hs (con turno previo)
               </p>
             </div>
@@ -281,7 +281,7 @@ export default function Contact() {
                 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[var(--primary)]"
                 strokeWidth={1.75}
               />
-              <p className="font-body text-sm leading-[22px] text-[var(--on-surface)]">
+              <p className="text-sm leading-[22px] text-[var(--on-surface)]">
                 La primera consulta orientativa es{" "}
                 <span className="font-bold">sin cargo</span>.
                 Contáctenos con confianza.

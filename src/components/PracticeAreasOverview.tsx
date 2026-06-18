@@ -61,14 +61,14 @@ export default function PracticeAreasOverview() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="mx-auto max-w-[760px] text-center"
       >
-        <p className="font-body text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
+        <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           Áreas de Práctica
         </p>
-        <h2 className="font-heading mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
           Especialización en los sectores{" "}
           <span className="text-[var(--primary)]">que más crecen</span>
         </h2>
-        <p className="font-body mt-5 text-base leading-[28px] text-[var(--foreground)] md:text-lg">
+        <p className="mt-5 text-base leading-[28px] text-[var(--foreground)] md:text-lg">
           Nuestro estudio concentra su práctica en cinco áreas estratégicas
           donde la complejidad jurídica exige conocimiento especializado y
           actualización permanente.
@@ -99,11 +99,11 @@ export default function PracticeAreasOverview() {
                     strokeWidth={1.5}
                   />
                 </div>
-                <h3 className="font-heading text-xl text-[var(--primary)]">
+                <h3 className="text-xl text-[var(--primary)]">
                   {area.title}
                 </h3>
               </div>
-              <p className="font-body text-[15px] leading-[24px] text-[var(--foreground)]">
+              <p className="text-[15px] leading-[24px] text-[var(--foreground)]">
                 {area.description}
               </p>
             </motion.div>

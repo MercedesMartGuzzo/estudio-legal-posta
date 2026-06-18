@@ -80,10 +80,10 @@ export default function Testimonials() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mx-auto max-w-[560px] text-center"
         >
-          <p className="font-body text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
+          <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
             Testimonios
           </p>
-          <h2 className="font-heading mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+          <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
             Lo que dicen{" "}
             <span className="text-[var(--primary)]">nuestros clientes</span>
           </h2>
@@ -141,7 +141,7 @@ export default function Testimonials() {
                     className="h-6 w-6 text-[var(--secondary)]"
                     strokeWidth={1.5}
                   />
-                  <p className="font-body mt-3 text-[13px] leading-[22px] text-[var(--foreground)]">
+                  <p className="mt-3 text-[13px] leading-[22px] text-[var(--foreground)]">
                     {t.quote}
                   </p>
                 </div>
@@ -150,10 +150,10 @@ export default function Testimonials() {
                     {t.name.charAt(0)}
                   </div>
                   <div>
-                    <p className="font-body text-xs font-bold text-[var(--on-surface)]">
+                    <p className="text-xs font-bold text-[var(--on-surface)]">
                       {t.name}
                     </p>
-                    <p className="font-body text-[11px] text-[var(--foreground)]/70">
+                    <p className="text-[11px] text-[var(--foreground)]/70">
                       {t.role} · {t.company}
                     </p>
                   </div>

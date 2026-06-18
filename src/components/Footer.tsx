@@ -24,18 +24,18 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <Link
               href="#inicio"
-              className="font-heading text-2xl font-bold text-[var(--primary)]"
+              className="text-2xl font-bold text-[var(--primary)]"
             >
               Estudio Posta
             </Link>
-            <p className="font-body max-w-[280px] text-sm leading-[22px] text-[var(--foreground)]/70">
+            <p className="max-w-[280px] text-sm leading-[22px] text-[var(--foreground)]/70">
               Asesoramiento jurídico especializado en derecho comercial, societario, cooperativas, turismo, medios y propiedad intelectual.
             </p>
           </div>
 
           {/* Links de navegación */}
           <div>
-            <p className="font-body text-xs font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
+            <p className="text-xs font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
               Navegación
             </p>
             <ul className="mt-4 flex flex-col gap-3">
@@ -43,7 +43,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-body text-sm text-[var(--foreground)]/70 transition-colors duration-200 hover:text-[var(--primary)]"
+                    className="text-sm text-[var(--foreground)]/70 transition-colors duration-200 hover:text-[var(--primary)]"
                   >
                     {link.label}
                   </Link>
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Info de contacto */}
           <div>
-            <p className="font-body text-xs font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
+            <p className="text-xs font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
               Contacto
             </p>
             <ul className="mt-4 flex flex-col gap-3">
@@ -64,7 +64,7 @@ export default function Footer() {
                     className="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--secondary)]"
                     strokeWidth={1.75}
                   />
-                  <span className="font-body text-sm text-[var(--foreground)]/70">
+                  <span className="text-sm text-[var(--foreground)]/70">
                     {text}
                   </span>
                 </li>
@@ -75,10 +75,10 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-[var(--border)] pt-6 md:flex-row">
-          <p className="font-body text-xs text-[var(--foreground)]/50">
+          <p className="text-xs text-[var(--foreground)]/50">
             © {new Date().getFullYear()} Estudio de Abogados Posta. Todos los derechos reservados.
           </p>
-          <p className="font-body text-xs text-[var(--foreground)]/40">
+          <p className="text-xs text-[var(--foreground)]/40">
             Buenos Aires, Argentina
           </p>
         </div>

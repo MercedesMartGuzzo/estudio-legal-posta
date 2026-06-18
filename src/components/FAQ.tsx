@@ -56,7 +56,7 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
             onClick={() => toggle(index)}
             className="group flex w-full items-center justify-between gap-6 py-5 text-left"
           >
-            <span className="font-heading text-[17px] leading-snug text-[var(--on-surface)] transition-colors duration-200 group-hover:text-[var(--primary)]">
+            <span className="text-[17px] leading-snug text-[var(--on-surface)] transition-colors duration-200 group-hover:text-[var(--primary)]">
               {faq.question}
             </span>
             {openIndex === index ? (
@@ -75,7 +75,7 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
-                <p className="font-body pb-5 text-[14px] leading-[24px] text-[var(--foreground)]">
+                <p className="pb-5 text-[14px] leading-[24px] text-[var(--foreground)]">
                   {faq.answer}
                 </p>
               </motion.div>
@@ -97,10 +97,10 @@ export default function FAQ() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="mx-auto max-w-[680px] text-center"
       >
-        <p className="font-body text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
+        <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           Preguntas frecuentes
         </p>
-        <h2 className="font-heading mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
           Todo lo que necesitás{" "}
           <span className="text-[var(--primary)]">saber</span>
         </h2>

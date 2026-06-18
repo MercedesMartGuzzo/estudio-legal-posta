@@ -45,11 +45,11 @@ export default function IntProperty() {
         variants={fadeUp}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="font-heading text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
           Propiedad{" "}
           <span className="text-[var(--primary)]">Intelectual</span>
         </h2>
-        <p className="font-body mt-5 max-w-[860px] text-base leading-[28px] text-[var(--foreground)] md:text-lg">
+        <p className="mt-5 max-w-[860px] text-base leading-[28px] text-[var(--foreground)] md:text-lg">
           Los activos intangibles son hoy el principal valor de muchas
           empresas. Proteger marcas, obras, patentes y secretos industriales
           no es solo una cuestión legal: es una decisión estratégica de
@@ -86,7 +86,7 @@ export default function IntProperty() {
                 <h3 className="font-heading text-xl text-[var(--primary)]">
                   {card.title}
                 </h3>
-                <p className="font-body mt-3 text-[15px] leading-[24px] text-[var(--foreground)]">
+                <p className="mt-3 text-[15px] leading-[24px] text-[var(--foreground)]">
                   {card.description}
                 </p>
               </div>

@@ -38,7 +38,7 @@ function PracticeList({
 }) {
   return (
     <div>
-      <h3 className="font-heading text-xl text-[var(--primary)]">{title}</h3>
+      <h3 className="text-xl text-[var(--primary)]">{title}</h3>
       <ul className="mt-5 flex flex-col gap-3.5">
         {items.map((item, index) => {
           const color = GREEN_SHADES[index % GREEN_SHADES.length];
@@ -62,7 +62,7 @@ function PracticeList({
                 style={{ color }}
                 strokeWidth={2.5}
               />
-              <p className="font-body text-[15px] leading-[24px] text-[var(--foreground)]">
+              <p className="text-[15px] leading-[24px] text-[var(--foreground)]">
                 {item}
               </p>
             </motion.li>
@@ -84,11 +84,11 @@ export default function CommercialAndCorporateSection() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-8 md:p-12"
       >
-        <h2 className="font-heading text-[28px] leading-[36px] text-[var(--on-surface)] md:text-[36px] md:leading-[44px]">
+        <h2 className="text-[28px] leading-[36px] text-[var(--on-surface)] md:text-[36px] md:leading-[44px]">
           Derecho Comercial y{" "}
           <span className="text-[var(--primary)]">Societario</span>
         </h2>
-        <p className="font-body mt-4 max-w-[760px] text-base leading-[28px] text-[var(--foreground)] md:text-lg">
+        <p className="mt-4 max-w-[760px] text-base leading-[28px] text-[var(--foreground)] md:text-lg">
           La base jurídica sólida es el pilar de toda operación comercial
           exitosa. Nuestro equipo acompaña a empresas en cada etapa de su
           desarrollo, desde la elección del tipo societario más conveniente
