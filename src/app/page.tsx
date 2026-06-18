@@ -11,7 +11,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
-import CalendlySection from "@/components/CalendySection";
+/* import CalendlySection from "@/components/CalendySection"; */
 import Footer from "@/components/Footer";
 
 
@@ -38,7 +38,7 @@ export default function Home() {
         <FAQ />
 
         <Contact />
-        <CalendlySection />
+      {/*   <CalendlySection /> */}
       </main>
 
       <Footer />
