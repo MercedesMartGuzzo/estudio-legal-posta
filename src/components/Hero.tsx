@@ -50,10 +50,11 @@ export default function Hero() {
           {/* Content */}
           <div className="flex flex-col gap-6 md:gap-8">
             <motion.div className="space-y-3" variants={itemVariants}>
-              <h1 className="font-[--font-heading] text-4xl md:text-5xl lg:text-5xl  text-[#163a2d] leading-tight">
-                Estudio Jurídico
-                <br />
-                <span className="text-[#785a00]">Especializado</span>
+              <h1 className="font-[--font-heading] text-4xl md:text-5xl lg:text-5xl text-[#163a2d] leading-tight">
+                Estudio{" "}
+                <span className="text-[#785a00]">
+                  Jurídico
+                </span>
               </h1>
             </motion.div>
 
