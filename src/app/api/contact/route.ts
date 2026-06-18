@@ -1,4 +1,4 @@
-import { Resend } from "resend";
+/* import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -27,4 +27,4 @@ export async function POST(req: Request) {
         console.error(error);
         return NextResponse.json({ ok: false }, { status: 500 });
     }
-}
+} */
