@@ -59,6 +59,7 @@ export default function About() {
         <p className="font-body text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           Quiénes Somos
         </p>
+
         <h2 className="font-heading mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
           Un estudio con{" "}
           <span className="text-[var(--primary)]">visión estratégica</span> y
@@ -75,7 +76,7 @@ export default function About() {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
           className="flex flex-col gap-6"
         >
-          <p className="font-body text-base leading-[28px] text-[var(--foreground)] md:text-lg">
+          <p className="font-body text-base leading-[28px] text-[var(--foreground)] md:text-lg md:mt-10">
             Somos un estudio jurídico dedicado a brindar asesoramiento legal
             integral a empresas, emprendedores, cooperativas y personas
             físicas que operan en sectores dinámicos de la economía
@@ -83,6 +84,7 @@ export default function About() {
             con una comprensión profunda de los desafíos reales del mundo de
             los negocios.
           </p>
+
           <p className="font-body text-base leading-[28px] text-[var(--foreground)] md:text-lg">
             Trabajamos de manera cercana con nuestros clientes, entendiendo
             que cada situación requiere soluciones a medida. No ofrecemos
@@ -98,14 +100,15 @@ export default function About() {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeUp}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          className="rounded-lg bg-[var(--primary)] p-8 md:p-10"
         >
-          <h3 className="font-heading text-2xl text-white">
+          <h3 className="font-heading font-bold text-2xl text-[var(--primary)]">
             Nuestros Valores
           </h3>
-          <ul className="mt-7 flex flex-col gap-5">
+
+          <ul className="mt-4 flex flex-col gap-3">
             {VALUES.map((value, index) => {
               const Icon = value.icon;
+
               return (
                 <motion.li
                   key={value.label}
@@ -118,15 +121,16 @@ export default function About() {
                     ease: "easeOut",
                     delay: 0.25 + index * 0.08,
                   }}
-                  className="flex items-center gap-4"
+                  className="group flex items-center gap-3 rounded-lg bg-[#0F6E451A] p-1 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(31,77,61,0.15)]"
                 >
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#fece5e]/20">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#0F6E4520]">
                     <Icon
-                      className="h-5 w-5 text-[#fece5e]"
+                      className="h-5 w-5 text-[var(--primary)] transition-transform duration-300 group-hover:scale-110"
                       strokeWidth={1.75}
                     />
                   </div>
-                  <p className="font-body text-base leading-[24px] text-white/95">
+
+                  <p className="font-body text-[15px] leading-[24px] text-[var(--foreground)]">
                     <span className="font-bold">{value.label}</span>{" "}
                     {value.text}
                   </p>
