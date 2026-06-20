@@ -59,12 +59,18 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
             className="mb-3 overflow-hidden rounded-lg md:mb-0 md:rounded-none md:border-b md:border-[var(--border)]"
           >
             <div
-              className="relative overflow-hidden rounded-lg md:rounded-none"
+              className={`relative overflow-hidden md:rounded-none ${
+                isOpen ? "rounded-t-lg" : "rounded-lg"
+              }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Desktop: fondo animado en hover, desaparece al abrir. Mobile: fondo fijo siempre, incluso abierta */}
-              <div className="absolute inset-0 rounded-lg bg-[var(--primary)]/80 md:hidden" />
+              <div
+                className={`absolute inset-0 bg-[var(--primary)]/80 md:hidden ${
+                  isOpen ? "rounded-t-lg" : "rounded-lg"
+                }`}
+              />
 
               {!isOpen && (
                 <motion.div
@@ -112,9 +118,9 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="overflow-hidden bg-[var(--surface)] md:bg-transparent"
+                  className="overflow-hidden rounded-b-lg border-x border-b border-[var(--border)] bg-[var(--surface)] md:rounded-none md:border-0 md:bg-transparent"
                 >
-                  <p className="font-body px-4 pb-5 pt-1 text-[14px] leading-[24px] text-[var(--foreground)] md:px-2 md:pt-0">
+                  <p className="font-body px-4 pb-5 pt-4 text-[14px] leading-[24px] text-[var(--foreground)] md:px-2 md:pt-0">
                     {faq.answer}
                   </p>
                 </motion.div>
