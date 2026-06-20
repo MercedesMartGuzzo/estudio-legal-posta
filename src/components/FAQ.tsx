@@ -43,29 +43,16 @@ const RIGHT = FAQS.filter((_, i) => i % 2 !== 0);
 function FAQColumn({ items }: { items: typeof FAQS }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [flashIndex, setFlashIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
-    const isCurrentlyOpen = openIndex === index;
     setOpenIndex((prev) => (prev === index ? null : index));
-
-    // En dispositivos sin hover real (touch), mostramos el efecto como un destello al tocar,
-    // ya que mantener el dedo presionado no es un gesto natural para el usuario.
-    const supportsHover =
-      typeof window !== "undefined" &&
-      window.matchMedia("(hover: hover)").matches;
-
-    if (!supportsHover && !isCurrentlyOpen) {
-      setFlashIndex(index);
-      setTimeout(() => setFlashIndex(null), 450);
-    }
   };
 
   return (
     <div className="flex flex-col">
       {items.map((faq, index) => {
         const isOpen = openIndex === index;
-        const isHovered = hoveredIndex === index || flashIndex === index;
+        const isHovered = hoveredIndex === index;
         return (
           <div key={faq.question} className="border-b border-[var(--border)]">
             <div
@@ -73,15 +60,21 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Fondo verde botella que se desliza de izquierda a derecha en hover — solo si está cerrada */}
+              {/* Desktop: fondo animado en hover. Mobile: fondo fijo siempre visible en preguntas cerradas */}
               {!isOpen && (
-                <motion.div
-                  className="absolute inset-0 bg-[var(--primary)]/80"
-                  initial={false}
-                  animate={{ scaleX: isHovered ? 1 : 0 }}
-                  transition={{ duration: 0.35, ease: "easeOut" }}
-                  style={{ transformOrigin: "left" }}
-                />
+                <>
+                  {/* Versión mobile: bg sólido sin animación */}
+                  <div className="absolute inset-0 bg-[var(--primary)]/80 md:hidden" />
+
+                  {/* Versión desktop: bg animado con hover */}
+                  <motion.div
+                    className="absolute inset-0 hidden bg-[var(--primary)]/80 md:block"
+                    initial={false}
+                    animate={{ scaleX: isHovered ? 1 : 0 }}
+                    transition={{ duration: 0.35, ease: "easeOut" }}
+                    style={{ transformOrigin: "left" }}
+                  />
+                </>
               )}
 
               <button
@@ -91,7 +84,11 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
               >
                 <span
                   className={`font-heading text-[17px] leading-snug transition-colors duration-200 ${
-                    isHovered && !isOpen ? "text-white" : "text-[var(--on-surface)]"
+                    isOpen
+                      ? "text-[var(--on-surface)]"
+                      : isHovered
+                        ? "text-white"
+                        : "text-white md:text-[var(--on-surface)]"
                   }`}
                 >
                   {faq.question}
@@ -101,7 +98,7 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
                 ) : (
                   <Plus
                     className={`h-4 w-4 flex-shrink-0 transition-colors duration-200 ${
-                      isHovered ? "text-white" : "text-[var(--foreground)]/50"
+                      isHovered ? "text-white" : "text-white md:text-[var(--foreground)]/50"
                     }`}
                     strokeWidth={2}
                   />
