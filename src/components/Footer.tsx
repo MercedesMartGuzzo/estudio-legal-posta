@@ -11,7 +11,7 @@ const NAV_LINKS = [
 
 const CONTACT_INFO = [
   { icon: MapPin, text: "Buenos Aires, Argentina" },
-  { icon: Mail, text: "consultas@estudiojuridico.com.ar" },
+  { icon: Mail, text: "estudiopostalegal@gmail.com" },
   { icon: Phone, text: "+54 11 XXXX-XXXX" },
 ];
 

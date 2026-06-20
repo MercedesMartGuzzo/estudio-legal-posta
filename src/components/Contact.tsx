@@ -15,7 +15,7 @@ const CONTACT_INFO = [
   {
     icon: Mail,
     label: "Correo Electrónico",
-    lines: ["consultas@estudiojuridico.com.ar"],
+    lines: ["estudiopostalegal@gmail.com"],
   },
   {
     icon: Phone,
@@ -45,14 +45,14 @@ export default function Contact() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="mx-auto max-w-[680px] text-center"
       >
-        <p className="font-body text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
+        <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--primary)]">
           Contacto
         </p>
-        <h2 className="font-heading mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
           Consulte con{" "}
           <span className="text-[var(--primary)]">nuestro equipo</span>
         </h2>
-        <p className="font-body mt-4 text-base leading-[28px] text-[var(--foreground)]">
+        <p className="mt-4 text-base leading-[28px] text-[var(--foreground)]">
           Coordine una consulta inicial gratuita seleccionando el día y horario
           que mejor se ajuste a su disponibilidad.
         </p>
@@ -84,7 +84,7 @@ export default function Contact() {
           className="flex flex-col gap-8"
         >
           <div>
-            <h3 className="font-heading text-xl text-[var(--on-surface)]">
+            <h3 className="text-xl">
               Información de Contacto
             </h3>
             <div className="mt-6 flex flex-col gap-6">
@@ -95,9 +95,9 @@ export default function Contact() {
                     strokeWidth={1.75}
                   />
                   <div>
-                    <p className="font-body text-sm font-bold text-[var(--on-surface)]">{label}</p>
+                    <p className="text-sm font-bold text-[var(--on-surface)]">{label}</p>
                     {lines.map((line) => (
-                      <p key={line} className="font-body text-sm text-[var(--foreground)]">{line}</p>
+                      <p key={line} className="text-sm text-[var(--foreground)]">{line}</p>
                     ))}
                   </div>
                 </div>
@@ -106,14 +106,14 @@ export default function Contact() {
           </div>
 
           <div className="border-t border-[var(--border)] pt-8">
-            <h3 className="font-heading text-xl text-[var(--on-surface)]">
+            <h3 className="text-xl text-[var(--on-surface)]">
               Horario de Atención
             </h3>
             <div className="mt-4 flex flex-col gap-1">
-              <p className="font-body text-sm text-[var(--foreground)]">
+              <p className="text-sm text-[var(--foreground)]">
                 Lunes a viernes: 9:00 a 18:00 hs
               </p>
-              <p className="font-body text-sm text-[var(--foreground)]">
+              <p className="text-sm text-[var(--foreground)]">
                 Sábados: 9:00 a 13:00 hs (con turno previo)
               </p>
             </div>
@@ -125,7 +125,7 @@ export default function Contact() {
                 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[var(--primary)]"
                 strokeWidth={1.75}
               />
-              <p className="font-body text-sm leading-[22px] text-[var(--on-surface)]">
+              <p className="text-sm leading-[22px] text-[var(--on-surface)]">
                 La primera consulta orientativa es{" "}
                 <span className="font-bold">sin cargo</span>.
                 Contáctenos con confianza.
