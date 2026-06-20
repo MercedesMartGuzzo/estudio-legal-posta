@@ -59,6 +59,9 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
               className="relative overflow-hidden"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
+              onTouchStart={() => setHoveredIndex(index)}
+              onTouchEnd={() => setHoveredIndex(null)}
+              onTouchCancel={() => setHoveredIndex(null)}
             >
               {/* Fondo verde botella que se desliza de izquierda a derecha en hover — solo si está cerrada */}
               {!isOpen && (

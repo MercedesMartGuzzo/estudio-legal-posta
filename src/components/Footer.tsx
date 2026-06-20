@@ -64,7 +64,7 @@ export default function Footer() {
                     className="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--secondary)]"
                     strokeWidth={1.75}
                   />
-                  <span className="text-sm text-[var(--foreground)]/70">
+                  <span className="text-sm text-[var(--foreground)]">
                     {text}
                   </span>
                 </li>
