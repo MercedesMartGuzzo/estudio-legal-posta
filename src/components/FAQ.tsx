@@ -54,27 +54,26 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
         const isOpen = openIndex === index;
         const isHovered = hoveredIndex === index;
         return (
-          <div key={faq.question} className="border-b border-[var(--border)]">
+          <div
+            key={faq.question}
+            className="mb-3 overflow-hidden rounded-lg md:mb-0 md:rounded-none md:border-b md:border-[var(--border)]"
+          >
             <div
-              className="relative overflow-hidden"
+              className="relative overflow-hidden rounded-lg md:rounded-none"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Desktop: fondo animado en hover. Mobile: fondo fijo siempre visible en preguntas cerradas */}
-              {!isOpen && (
-                <>
-                  {/* Versión mobile: bg sólido sin animación */}
-                  <div className="absolute inset-0 bg-[var(--primary)]/80 md:hidden" />
+              {/* Desktop: fondo animado en hover, desaparece al abrir. Mobile: fondo fijo siempre, incluso abierta */}
+              <div className="absolute inset-0 rounded-lg bg-[var(--primary)]/80 md:hidden" />
 
-                  {/* Versión desktop: bg animado con hover */}
-                  <motion.div
-                    className="absolute inset-0 hidden bg-[var(--primary)]/80 md:block"
-                    initial={false}
-                    animate={{ scaleX: isHovered ? 1 : 0 }}
-                    transition={{ duration: 0.35, ease: "easeOut" }}
-                    style={{ transformOrigin: "left" }}
-                  />
-                </>
+              {!isOpen && (
+                <motion.div
+                  className="absolute inset-0 hidden bg-[var(--primary)]/80 md:block"
+                  initial={false}
+                  animate={{ scaleX: isHovered ? 1 : 0 }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
+                  style={{ transformOrigin: "left" }}
+                />
               )}
 
               <button
@@ -85,7 +84,7 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
                 <span
                   className={`font-heading text-[17px] leading-snug transition-colors duration-200 ${
                     isOpen
-                      ? "text-[var(--on-surface)]"
+                      ? "text-white md:text-[var(--on-surface)]"
                       : isHovered
                         ? "text-white"
                         : "text-white md:text-[var(--on-surface)]"
@@ -94,7 +93,7 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
                   {faq.question}
                 </span>
                 {isOpen ? (
-                  <Minus className="h-4 w-4 flex-shrink-0 text-[var(--primary)]" strokeWidth={2} />
+                  <Minus className="h-4 w-4 flex-shrink-0 text-white md:text-[var(--primary)]" strokeWidth={2} />
                 ) : (
                   <Plus
                     className={`h-4 w-4 flex-shrink-0 transition-colors duration-200 ${
@@ -113,9 +112,9 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="overflow-hidden"
+                  className="overflow-hidden bg-[var(--surface)] md:bg-transparent"
                 >
-                  <p className="font-body px-2 pb-5 text-[14px] leading-[24px] text-[var(--foreground)]">
+                  <p className="font-body px-4 pb-5 pt-1 text-[14px] leading-[24px] text-[var(--foreground)] md:px-2 md:pt-0">
                     {faq.answer}
                   </p>
                 </motion.div>
