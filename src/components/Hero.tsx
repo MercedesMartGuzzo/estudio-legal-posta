@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function Hero() {
@@ -38,7 +39,10 @@ export default function Hero() {
   } as const;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff8f5] to-[#f9f2ef] pt-28 md:pt-24 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
+    <section
+      id="inicio"
+      className="relative overflow-hidden bg-gradient-to-b from-[#fff8f5] to-[#f9f2ef] pt-28 md:pt-24 lg:pt-32 pb-16 md:pb-24 lg:pb-32"
+    >
       <div className="mx-auto max-w-[1200px] px-4 md:px-16">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
@@ -67,12 +71,18 @@ export default function Hero() {
 
             {/* CTAs */}
             <motion.div className="flex flex-col sm:flex-row gap-4 pt-2" variants={itemVariants}>
-              <button className="px-8 py-3 border-2 border-[#1f4d3d] bg-[#1f4d3d] text-white font-medium rounded-lg [letter-spacing:1px] hover:bg-white hover:text-[#1f4d3d] transition-colors shadow-sm">
+              <Link
+                href="#contacto"
+                className="px-8 py-3 border-2 border-[#1f4d3d] bg-[#1f4d3d] text-white font-medium rounded-lg [letter-spacing:1px] hover:bg-white hover:text-[#1f4d3d] transition-colors shadow-sm text-center"
+              >
                 Solicitar Consulta
-              </button>
-              <button className="px-8 py-3 border-2 border-[#1f4d3d] text-[#1f4d3d] font-medium rounded-lg [letter-spacing:1px] hover:bg-[#1f4d3d] hover:text-white transition-colors">
+              </Link>
+              <Link
+                href="#areas"
+                className="px-8 py-3 border-2 border-[#1f4d3d] text-[#1f4d3d] font-medium rounded-lg [letter-spacing:1px] hover:bg-[#1f4d3d] hover:text-white transition-colors text-center"
+              >
                 Nuestras Áreas
-              </button>
+              </Link>
             </motion.div>
           </div>
 
