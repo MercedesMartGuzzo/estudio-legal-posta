@@ -43,25 +43,35 @@ const RIGHT = FAQS.filter((_, i) => i % 2 !== 0);
 function FAQColumn({ items }: { items: typeof FAQS }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [flashIndex, setFlashIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
+    const isCurrentlyOpen = openIndex === index;
     setOpenIndex((prev) => (prev === index ? null : index));
+
+    // En dispositivos sin hover real (touch), mostramos el efecto como un destello al tocar,
+    // ya que mantener el dedo presionado no es un gesto natural para el usuario.
+    const supportsHover =
+      typeof window !== "undefined" &&
+      window.matchMedia("(hover: hover)").matches;
+
+    if (!supportsHover && !isCurrentlyOpen) {
+      setFlashIndex(index);
+      setTimeout(() => setFlashIndex(null), 450);
+    }
   };
 
   return (
     <div className="flex flex-col">
       {items.map((faq, index) => {
         const isOpen = openIndex === index;
-        const isHovered = hoveredIndex === index;
+        const isHovered = hoveredIndex === index || flashIndex === index;
         return (
           <div key={faq.question} className="border-b border-[var(--border)]">
             <div
               className="relative overflow-hidden"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              onTouchStart={() => setHoveredIndex(index)}
-              onTouchEnd={() => setHoveredIndex(null)}
-              onTouchCancel={() => setHoveredIndex(null)}
             >
               {/* Fondo verde botella que se desliza de izquierda a derecha en hover — solo si está cerrada */}
               {!isOpen && (
