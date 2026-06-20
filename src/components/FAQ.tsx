@@ -42,6 +42,7 @@ const RIGHT = FAQS.filter((_, i) => i % 2 !== 0);
 
 function FAQColumn({ items }: { items: typeof FAQS }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
@@ -49,40 +50,70 @@ function FAQColumn({ items }: { items: typeof FAQS }) {
 
   return (
     <div className="flex flex-col">
-      {items.map((faq, index) => (
-        <div key={faq.question} className="border-b border-[var(--border)]">
-          <button
-            type="button"
-            onClick={() => toggle(index)}
-            className="group flex w-full items-center justify-between gap-6 py-5 text-left"
-          >
-            <span className="text-[17px] leading-snug text-[var(--on-surface)] transition-colors duration-200 group-hover:text-[var(--primary)]">
-              {faq.question}
-            </span>
-            {openIndex === index ? (
-              <Minus className="h-4 w-4 flex-shrink-0 text-[var(--primary)]" strokeWidth={2} />
-            ) : (
-              <Plus className="h-4 w-4 flex-shrink-0 text-[var(--foreground)]/50 transition-colors duration-200 group-hover:text-[var(--primary)]" strokeWidth={2} />
-            )}
-          </button>
+      {items.map((faq, index) => {
+        const isOpen = openIndex === index;
+        const isHovered = hoveredIndex === index;
+        return (
+          <div key={faq.question} className="border-b border-[var(--border)]">
+            <div
+              className="relative overflow-hidden"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              {/* Fondo verde botella que se desliza de izquierda a derecha en hover — solo si está cerrada */}
+              {!isOpen && (
+                <motion.div
+                  className="absolute inset-0 bg-[var(--primary)]/80"
+                  initial={false}
+                  animate={{ scaleX: isHovered ? 1 : 0 }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
+                  style={{ transformOrigin: "left" }}
+                />
+              )}
 
-          <AnimatePresence initial={false}>
-            {openIndex === index && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="overflow-hidden"
+              <button
+                type="button"
+                onClick={() => toggle(index)}
+                className="relative z-10 flex w-full items-center justify-between gap-6 px-4 py-5 text-left"
               >
-                <p className="pb-5 text-[14px] leading-[24px] text-[var(--foreground)]">
-                  {faq.answer}
-                </p>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      ))}
+                <span
+                  className={`font-heading text-[17px] leading-snug transition-colors duration-200 ${
+                    isHovered && !isOpen ? "text-white" : "text-[var(--on-surface)]"
+                  }`}
+                >
+                  {faq.question}
+                </span>
+                {isOpen ? (
+                  <Minus className="h-4 w-4 flex-shrink-0 text-[var(--primary)]" strokeWidth={2} />
+                ) : (
+                  <Plus
+                    className={`h-4 w-4 flex-shrink-0 transition-colors duration-200 ${
+                      isHovered ? "text-white" : "text-[var(--foreground)]/50"
+                    }`}
+                    strokeWidth={2}
+                  />
+                )}
+              </button>
+            </div>
+
+            <AnimatePresence initial={false}>
+              {isOpen && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <p className="font-body px-2 pb-5 text-[14px] leading-[24px] text-[var(--foreground)]">
+                    {faq.answer}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -97,10 +128,10 @@ export default function FAQ() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="mx-auto max-w-[680px] text-center"
       >
-        <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
+        <p className="font-body text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           Preguntas frecuentes
         </p>
-        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="font-heading mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
           Todo lo que necesitás{" "}
           <span className="text-[var(--primary)]">saber</span>
         </h2>

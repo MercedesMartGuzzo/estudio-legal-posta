@@ -28,7 +28,7 @@ export default function Footer() {
             >
               Estudio Posta
             </Link>
-            <p className="max-w-[280px] text-sm leading-[22px] text-[var(--foreground)]/70">
+            <p className="max-w-[280px] text-sm leading-[22px] text-[var(--foreground)]">
               Asesoramiento jurídico especializado en derecho comercial, societario, cooperativas, turismo, medios y propiedad intelectual.
             </p>
           </div>
@@ -43,7 +43,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-[var(--foreground)]/70 transition-colors duration-200 hover:text-[var(--primary)]"
+                    className="text-sm text-[var(--foreground) transition-colors duration-200 hover:text-[var(--primary)]"
                   >
                     {link.label}
                   </Link>
@@ -75,10 +75,10 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-[var(--border)] pt-6 md:flex-row">
-          <p className="text-xs text-[var(--foreground)]/50">
+          <p className="text-xs text-[var(--primary)]">
             © {new Date().getFullYear()} Estudio de Abogados Posta. Todos los derechos reservados.
           </p>
-          <p className="text-xs text-[var(--foreground)]/40">
+          <p className="text-xs text-[var(--primary)]">
             Buenos Aires, Argentina
           </p>
         </div>
