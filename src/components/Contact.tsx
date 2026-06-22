@@ -43,7 +43,7 @@ export default function Contact() {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeUp}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="mx-auto max-w-[680px] text-center"
+        className="max-w-[680px] text-start"
       >
         <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--primary)]">
           Contacto

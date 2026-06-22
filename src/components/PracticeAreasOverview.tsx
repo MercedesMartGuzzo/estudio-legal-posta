@@ -51,7 +51,7 @@ export default function PracticeAreasOverview() {
   return (
     <section
       id="areas"
-      className="mx-auto max-w-[1200px] px-4 py-[120px] md:px-16"
+      className="max-w-[1200px] px-4  md:px-16 mx-auto"
     >
       <motion.div
         initial="hidden"
@@ -59,7 +59,7 @@ export default function PracticeAreasOverview() {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeUp}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="mx-auto max-w-[760px] text-center"
+        className=" max-w-[760px] text-start"
       >
         <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           Áreas de Práctica

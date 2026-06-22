@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeUp}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="mx-auto max-w-[800px] text-center"
+        className="max-w-[800px] text-start"
       >
         <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           ¿Por qué elegirnos?
