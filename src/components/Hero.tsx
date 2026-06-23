@@ -9,41 +9,28 @@ export default function Hero() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
+      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
     },
   } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-      },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   } as const;
 
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-      },
-    },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
   } as const;
 
   return (
+    // 1. Quitamos los paddings verticales (pt/pb) y usamos h-screen para asegurar altura completa
+    // 2. Usamos flex items-center para centrar verticalmente
     <section
       id="inicio"
-      className="relative overflow-hidden bg-gradient-to-b from-[#fff8f5] to-[#f9f2ef] pt-28 md:pt-24 lg:pt-32 pb-16 md:pb-24 lg:pb-32"
+      className="relative h-screen w-full flex items-center overflow-hidden bg-gradient-to-b from-[#fff8f5] to-[#f9f2ef]"
     >
-      <div className="mx-auto max-w-[1200px] px-4 md:px-16">
+      <div className="mx-auto max-w-[1200px] px-4 md:px-16 w-full">
         <motion.div
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           variants={containerVariants}
@@ -56,17 +43,17 @@ export default function Hero() {
             <motion.div className="space-y-3" variants={itemVariants}>
               <h1 className="text-4xl md:text-5xl lg:text-5xl text-[#163a2d] leading-tight">
                 Estudio{" "}
-                <span className="text-[#785a00]">
-                  Jurídico
-                </span>
+                <span className="text-[#785a00]">Jurídico</span>
               </h1>
             </motion.div>
 
             <motion.p
-              className=" text-base md:text-lg text-[#454240] leading-relaxed"
+              className="text-base md:text-lg text-[#454240] leading-relaxed"
               variants={itemVariants}
             >
-              Asesoramiento legal de excelencia en derecho comercial, societario, turismo, medios y propiedad intelectual. Soluciones jurídicas concretas para personas y empresas en Argentina.
+              Asesoramiento legal de excelencia en derecho comercial, societario, 
+              turismo, medios y propiedad intelectual. Soluciones jurídicas concretas 
+              para personas y empresas en Argentina.
             </motion.p>
 
             {/* CTAs */}

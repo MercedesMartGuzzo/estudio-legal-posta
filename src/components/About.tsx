@@ -58,7 +58,7 @@ export default function About() {
     >
       <motion.div
         style={{ scale, opacity, y }}
-        className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden rounded-[2rem] bg-[var(--primary)] px-6 py-16 md:px-16 md:py-20"
+        className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden rounded-[3rem] bg-[var(--primary)] px-6 py-16 md:px-16 md:py-20"
       >
         <div className="mx-auto max-w-[1200px] px-4 md:px-12">
           <div className="max-w-[800px] text-start">
@@ -66,7 +66,7 @@ export default function About() {
               Quiénes Somos
             </p>
 
-            <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--surface)] md:text-[40px] md:leading-[48px]">
+            <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--surface)] md:text-[40px] md:leading-[48px] md:text-nowrap">
               Un estudio con{" "}
               <span className="text-[var(--secondary)]">
                 visión estratégica

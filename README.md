@@ -77,3 +77,50 @@ legal-posta-estudio
 └─ tsconfig.json
 
 ```
+```
+legal-posta-estudio
+├─ DESING.md
+├─ eslint.config.mjs
+├─ next.config.ts
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.mjs
+├─ public
+│  ├─ cooperative-s.png
+│  ├─ file.svg
+│  ├─ globe.svg
+│  ├─ media-section.png
+│  ├─ next.svg
+│  ├─ prueba-hero4.png
+│  ├─ vercel.svg
+│  └─ window.svg
+├─ README.md
+├─ src
+│  ├─ app
+│  │  ├─ favicon.ico
+│  │  ├─ globals.css
+│  │  ├─ layout.tsx
+│  │  └─ page.tsx
+│  ├─ components
+│  │  ├─ About.tsx
+│  │  ├─ CalendySection.tsx
+│  │  ├─ CommercialAndCorporateSection.tsx
+│  │  ├─ Contact.tsx
+│  │  ├─ CooperativesSection.tsx
+│  │  ├─ DigitalSectionMedia.tsx
+│  │  ├─ FAQ.tsx
+│  │  ├─ Footer.tsx
+│  │  ├─ Hero.tsx
+│  │  ├─ IntProperty.tsx
+│  │  ├─ Navbar.tsx
+│  │  ├─ PracticeAreasOverview.tsx
+│  │  ├─ Testimonials.tsx
+│  │  ├─ TourismSection.tsx
+│  │  └─ WhyChooseUs.tsx
+│  ├─ data
+│  ├─ lib
+│  └─ types
+├─ tailwind.config.ts
+└─ tsconfig.json
+
+```

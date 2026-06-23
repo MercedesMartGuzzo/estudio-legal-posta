@@ -38,7 +38,7 @@ export default function CooperativesSection() {
     >
       <motion.div
         style={{ scale, opacity, y }}
-        className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden rounded-[2rem] bg-[var(--surface-alt)] px-6 py-16 md:px-16 md:py-20"
+        className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden rounded-[3rem] bg-[var(--surface-alt)] px-6 py-16 md:px-16 md:py-20"
       >
         <div className="mx-auto max-w-[1200px] px-4 md:px-12">
           <div className="max-w-[800px] text-start">
