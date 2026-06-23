@@ -27,6 +27,15 @@ body {
   font-family: var(--font-body);
 }
 
+
+[id] {
+  scroll-margin-top: 2rem;
+}
+
+#inicio {
+  scroll-margin-top: 0;
+}
+
 h1,
 h2,
 h3,
@@ -35,4 +44,3 @@ h5,
 h6 {
   font-family: var(--font-heading);
 }
-
