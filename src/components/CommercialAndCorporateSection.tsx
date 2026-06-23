@@ -84,7 +84,7 @@ export default function CommercialAndCorporateSection() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-8 md:p-12"
       >
-        <h2 className="text-[28px] leading-[36px] text-[var(--on-surface)] md:text-[36px] md:leading-[44px]">
+        <h2 className="text-[28px] leading-[36px] text-[var(--on-surface)] md:text-[36px] md:leading-[48px] font-[500]">
           Derecho Comercial y{" "}
           <span className="text-[var(--primary)]">Societario</span>
         </h2>

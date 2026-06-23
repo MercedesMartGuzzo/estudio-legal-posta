@@ -45,10 +45,10 @@ export default function Contact() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="max-w-[680px] text-start"
       >
-        <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--primary)]">
+        <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           Contacto
         </p>
-        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] font-[500]">
           Consulte con{" "}
           <span className="text-[var(--primary)]">nuestro equipo</span>
         </h2>

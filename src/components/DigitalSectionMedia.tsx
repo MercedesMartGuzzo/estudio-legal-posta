@@ -52,7 +52,7 @@ export default function DigitalSectionMedia() {
           Área Especializada
         </p>
 
-        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] font-[500]">
           Medios, Entretenimiento{" "}
           <span className="text-[var(--primary)]">& Cultura Digital</span>
         </h2>

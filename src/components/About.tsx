@@ -66,7 +66,7 @@ export default function About() {
               Quiénes Somos
             </p>
 
-            <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--surface)] md:text-[40px] md:leading-[48px] md:text-nowrap">
+            <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--surface)] md:text-[40px] md:leading-[48px] md:text-nowrap font-[500]">
               Un estudio con{" "}
               <span className="text-[var(--secondary)]">
                 visión estratégica

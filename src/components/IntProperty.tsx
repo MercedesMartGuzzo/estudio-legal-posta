@@ -45,7 +45,7 @@ export default function IntProperty() {
         variants={fadeUp}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] font-[500]">
           Propiedad{" "}
           <span className="text-[var(--primary)]">Intelectual</span>
         </h2>

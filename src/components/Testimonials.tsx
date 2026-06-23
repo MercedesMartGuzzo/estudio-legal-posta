@@ -83,7 +83,7 @@ export default function Testimonials() {
           <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
             Testimonios
           </p>
-          <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+          <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] font-[500]">
             Lo que dicen{" "}
             <span className="text-[var(--primary)]">nuestros clientes</span>
           </h2>

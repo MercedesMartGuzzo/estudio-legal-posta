@@ -46,7 +46,7 @@ export default function CooperativesSection() {
               Área Especializada
             </p>
 
-            <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+            <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] md:text-nowrap font-[500]">
               Cooperativas:{" "}
               <span className="text-[var(--primary)]">
                 Asesoramiento integral
@@ -71,7 +71,7 @@ export default function CooperativesSection() {
                 que va más allá del derecho societario tradicional. Asesoramos
                 en todo el ciclo de vida de la cooperativa, con especial
                 atención al marco normativo de la{" "}
-                <span className="font-bold">Ley 20.337</span> y las
+                <span className="font-bold text-[var(--primary)]">Ley 20.337</span> y las
                 disposiciones del INAES.
               </p>
 

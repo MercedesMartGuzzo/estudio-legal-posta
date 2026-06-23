@@ -45,13 +45,13 @@ export default function TourismSection() {
         variants={fadeUp}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] font-[500]">
           Empresas de <span className="text-[var(--primary)]">Turismo</span>
         </h2>
         <p className="mt-5 max-w-[760px] text-base leading-[28px] text-[var(--foreground)] md:text-lg">
           El sector turístico en Argentina está regulado por un conjunto
           normativo específico que incluye la{" "}
-          <span className="font-bold">Ley Nacional de Turismo 25.997</span>,
+          <span className="font-bold text-[var(--primary)]">Ley Nacional de Turismo 25.997</span>,
           el Decreto 2182/72 y las disposiciones del MINTUR. Las empresas del
           sector necesitan asesoramiento especializado para operar con
           seguridad jurídica.

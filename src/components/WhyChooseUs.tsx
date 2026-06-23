@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
         <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           ¿Por qué elegirnos?
         </p>
-        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px]">
+        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] font-[500]">
           La diferencia está en el{" "}
           <span className="text-[var(--primary)]">enfoque</span>
         </h2>
@@ -73,12 +73,12 @@ export default function WhyChooseUs() {
                 ease: "easeOut",
                 delay: (index % 2) * 0.1,
               }}
-              className="group flex flex-col gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--secondary)]/30 hover:shadow-[0_12px_32px_rgba(184,142,35,0.12)] [border-left:4px_solid_var(--secondary)]"
+              className="group flex flex-col gap-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--primary)]/30 hover:shadow-[0_12px_32px_rgba(184,142,35,0.12)] [border-left:4px_solid_var(--primary)]"
             >
               <div className="flex items-center gap-3">
-                <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[var(--secondary)]/10 transition-colors duration-300 group-hover:bg-[var(--secondary)]/20">
+                <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[var(--primary)]/10 transition-colors duration-300 group-hover:bg-[var(--primary)]/20">
                   <Icon
-                    className="h-5 w-5 text-[var(--secondary)]"
+                    className="h-5 w-5 text-[var(--primary)]"
                     strokeWidth={1.75}
                   />
                 </div>
