@@ -146,7 +146,7 @@ export default function FAQ() {
         <p className="font-body text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           Preguntas frecuentes
         </p>
-        <h2 className="font-heading mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] font-[500]">
+        <h2 className="font-heading mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] lg:leading-[48px] font-[500]">
           Todo lo que necesitás{" "}
           <span className="text-[var(--primary)]">saber</span>
         </h2>

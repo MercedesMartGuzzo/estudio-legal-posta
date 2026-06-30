@@ -64,7 +64,7 @@ export default function PracticeAreasOverview() {
         <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           Áreas de Práctica
         </p>
-        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] font-[500] md:text-nowrap">
+        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] font-[500] lg:text-nowrap">
           Especialización en los sectores{" "}
           <span className="text-[var(--primary)]">que más crecen</span>
         </h2>

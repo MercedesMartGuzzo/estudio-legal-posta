@@ -46,7 +46,7 @@ export default function CooperativesSection() {
               Área Especializada
             </p>
 
-            <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] md:text-nowrap font-[500]">
+            <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] lg:text-nowrap font-[500]">
               Cooperativas:{" "}
               <span className="text-[var(--primary)]">
                 Asesoramiento integral

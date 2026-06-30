@@ -24,8 +24,6 @@ export default function Hero() {
   } as const;
 
   return (
-    // 1. Quitamos los paddings verticales (pt/pb) y usamos h-screen para asegurar altura completa
-    // 2. Usamos flex items-center para centrar verticalmente
     <section
       id="inicio"
       className="relative h-screen w-full flex items-center overflow-hidden bg-gradient-to-b from-[#fff8f5] to-[#f9f2ef]"

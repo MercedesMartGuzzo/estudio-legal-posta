@@ -22,14 +22,13 @@ export default function Home() {
       <Navbar />
 
       <main className="relative">
-        {/* Contenedor que mantiene el Hero fijo */}
+    
         <div className="relative z-0">
           <div className="sticky top-0 h-screen w-full">
             <Hero />
           </div>
 
-          {/* El contenido siguiente debe tener un z-index superior 
-              y un fondo opaco para tapar el Hero */}
+        
           <div className="relative z-10 bg-[var(--surface)] rounded-t-[3rem]"> 
             <About />
             <PracticeAreasOverview />

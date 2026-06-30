@@ -48,7 +48,7 @@ export default function Contact() {
         <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--secondary)]">
           Contacto
         </p>
-        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] md:leading-[48px] font-[500]">
+        <h2 className="mt-3 text-[32px] leading-[40px] text-[var(--on-surface)] md:text-[40px] lg:leading-[48px] font-[500]">
           Consulte con{" "}
           <span className="text-[var(--primary)]">nuestro equipo</span>
         </h2>
