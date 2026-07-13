@@ -33,6 +33,7 @@ export default function CooperativesSection() {
 
   return (
     <section
+      id="cooperativas"
       ref={sectionRef}
       className="overflow-x-hidden pb-[120px]"
     >

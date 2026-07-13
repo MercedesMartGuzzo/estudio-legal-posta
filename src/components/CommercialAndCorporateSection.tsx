@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const COMMERCIAL_ITEMS = [
+  "Redacción, revisión y negociación de acuerdos comerciales complejos",
   "Redacción y revisión de contratos comerciales",
   "Contratos de distribución y agencia",
   "Franquicias y licencias de marca",
@@ -16,6 +17,7 @@ const CORPORATE_ITEMS = [
   "Constitución de SRL, SA, SAS y otras formas",
   "Reforma de estatutos y reglamentos",
   "Acuerdos de accionistas y socios",
+  "Prevención y gestión de conflictos societarios.",
   "Gobierno corporativo y compliance",
   "Fusiones, escisiones y adquisiciones",
   "Liquidación y disolución societaria",
@@ -75,7 +77,7 @@ function PracticeList({
 
 export default function CommercialAndCorporateSection() {
   return (
-    <section className="mx-auto max-w-[1200px] px-4 py-[60px] md:px-16">
+    <section id="comercial-y-societario" className="mx-auto max-w-[1200px] px-4 py-[60px] md:px-16">
       <motion.div
         initial="hidden"
         whileInView="visible"

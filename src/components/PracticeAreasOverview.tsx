@@ -7,6 +7,7 @@ import {
   Users,
   Plane,
   Clapperboard,
+  Plus,
 } from "lucide-react";
 
 const AREAS = [
@@ -14,32 +15,44 @@ const AREAS = [
     icon: Handshake,
     title: "Derecho Comercial",
     description:
-      "Contratos comerciales, operaciones de compraventa, distribución, franquicias y relaciones entre empresas. Redacción, revisión y negociación de acuerdos comerciales complejos.",
+      "Contratos comerciales, operaciones de compraventa, distribución, franquicias y relaciones entre empresas.",
+    targetId: "comercial-y-societario",
   },
   {
     icon: Building2,
     title: "Derecho Societario",
     description:
       "Constitución y transformación de sociedades, gobierno corporativo, acuerdos de accionistas, fusiones y adquisiciones. Asesoramiento integral en todo el ciclo de vida empresarial.",
+    targetId: "comercial-y-societario",
   },
   {
     icon: Users,
     title: "Cooperativas",
     description:
-      "Constitución, reforma estatutaria, asesoramiento en asambleas y relaciones con el INAES. Especialización en cooperativas de trabajo, consumo, crédito y servicios.",
+      "Constitución, reforma estatutaria, asesoramiento en asambleas y relaciones con el INAES. Especialización en cooperativas de trabajo, consumo, cultura, turismo crédito y servicios.",
+    targetId: "cooperativas",
   },
   {
     icon: Plane,
     title: "Empresas de Turismo",
     description:
-      "Marco regulatorio para agencias de viajes, operadoras, hoteles y plataformas digitales de turismo. Contratos de servicios turísticos, responsabilidad y habilitaciones.",
+      "El sector turístico presenta desafíos jurídicos propios que requieren asesoramiento especializado. Acompañamos a empresas y emprendedores del rubro en cada etapa de su actividad, desde la constitución del negocio hasta la resolución de conflictos, con foco en la seguridad jurídica y la protección de sus intereses.",
+    targetId: "turismo",
   },
   {
     icon: Clapperboard,
     title: "Medios y Entretenimiento",
     description:
-      "Contratos artísticos, licencias de contenidos, derechos de autor, acuerdos con plataformas digitales, regulación de medios de comunicación y producción audiovisual.",
+      "Intersección única entre el derecho de autor, los contratos artísticos, la regulación de radiodifusión y el derecho digital.",
+    targetId: "medios-y-entretenimiento",
   },
+  {
+    icon: Clapperboard,
+    title: "Propiedad Intelectual",
+    description:
+      "Asesoramiento completo en todas las ramas de la propiedad intelectual en Argentina y registros internacionales.",
+    targetId: "propiedad-intelectual",
+  }
 ];
 
 const fadeUp = {
@@ -48,6 +61,17 @@ const fadeUp = {
 };
 
 export default function PracticeAreasOverview() {
+  const handleCardClick = (targetId: string) => {
+    const element = document.getElementById(targetId);
+
+    if (!element) return;
+
+    const offset = 100;
+    const top = element.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({ top, behavior: "smooth" });
+  };
+
   return (
     <section
       id="areas"
@@ -69,9 +93,7 @@ export default function PracticeAreasOverview() {
           <span className="text-[var(--primary)]">que más crecen</span>
         </h2>
         <p className="mt-5 text-base leading-[28px] text-[var(--foreground)] md:text-lg">
-          Nuestro estudio concentra su práctica en cinco áreas estratégicas
-          donde la complejidad jurídica exige conocimiento especializado y
-          actualización permanente.
+        Nuestro estudio concentra su práctica en cinco áreas estratégicas donde la complejidad jurídica exige conocimiento especializado y actualización permanente.
         </p>
       </motion.div>
 
@@ -106,6 +128,16 @@ export default function PracticeAreasOverview() {
               <p className="text-[15px] leading-[24px] text-[var(--foreground)]">
                 {area.description}
               </p>
+
+              <button
+                type="button"
+                onClick={() => handleCardClick(area.targetId)}
+                className="inline-flex w-fit items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-alt)] px-3 py-2 text-sm font-semibold text-[var(--primary)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--primary)]/20 hover:bg-[var(--primary)] hover:text-[var(--surface-alt)]"
+                aria-label={`Ver más sobre ${area.title}`}
+              >
+                <span>Ver más</span>
+                <Plus className="h-4 w-4" strokeWidth={2} />
+              </button>
             </motion.div>
           );
         })}

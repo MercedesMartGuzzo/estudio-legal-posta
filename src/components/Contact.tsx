@@ -113,9 +113,9 @@ export default function Contact() {
               <p className="text-sm text-[var(--foreground)]">
                 Lunes a viernes: 9:00 a 18:00 hs
               </p>
-              <p className="text-sm text-[var(--foreground)]">
+             {/*  <p className="text-sm text-[var(--foreground)]">
                 Sábados: 9:00 a 13:00 hs (con turno previo)
-              </p>
+              </p> */}
             </div>
           </div>
 

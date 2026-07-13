@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Award,
   MessageCircle,
-  Target,
+  Handshake,
   ShieldCheck,
   Users,
 } from "lucide-react";
@@ -14,27 +14,27 @@ const VALUES = [
   {
     icon: Award,
     label: "Excelencia técnica",
-    text: "en cada área de práctica",
+   /*  text: "en cada área de práctica", */
   },
   {
     icon: MessageCircle,
-    label: "Transparencia",
-    text: "y comunicación clara con el cliente",
+    label: "Transparencia y lenguaje claro",
+  /*   text: "y comunicación clara con el cliente", */
   },
   {
-    icon: Target,
+    icon: Handshake,
     label: "Compromiso",
-    text: "con los resultados y plazos",
+   /*  text: "con los resultados y plazos", */
   },
   {
     icon: ShieldCheck,
     label: "Confidencialidad",
-    text: "absoluta en todo momento",
+   /*  text: "absoluta en todo momento", */
   },
   {
     icon: Users,
-    label: "Accesibilidad",
-    text: "para empresas de todos los tamaños",
+    label: "Adaptabilidad Empresarial:",
+    text: "soluciones a la medida de cada estructura.",
   },
 ];
 
@@ -78,21 +78,11 @@ export default function About() {
           <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div className="flex flex-col gap-6">
               <p className="text-base leading-[28px] text-[var(--surface)] md:text-lg md:mt-10">
-                Somos un estudio jurídico dedicado a brindar asesoramiento
-                legal integral a empresas, emprendedores, cooperativas y
-                personas físicas que operan en sectores dinámicos de la
-                economía argentina. Nuestra práctica combina el rigor técnico
-                del derecho con una comprensión profunda de los desafíos reales
-                del mundo de los negocios.
+                Somos un estudio jurídico dedicado a brindar asesoramiento legal integral a empresas, emprendedores, cooperativas y personas físicas que operan en sectores dinámicos de la economía argentina. Nuestra práctica combina el rigor técnico del derecho con una comprensión profunda de los desafíos reales del mundo de los negocios.
               </p>
 
               <p className="text-base leading-[28px] text-[var(--surface)] md:text-lg">
-                Trabajamos de manera cercana con nuestros clientes,
-                entendiendo que cada situación requiere soluciones a medida.
-                No ofrecemos respuestas genéricas: analizamos cada caso con
-                dedicación, claridad y enfoque estratégico, priorizando la
-                prevención de conflictos y la seguridad jurídica en cada
-                operación.
+                Trabajamos de manera cercana con nuestros clientes, entendiendo que cada situación requiere soluciones a medida. No ofrecemos respuestas genéricas: analizamos cada caso con dedicación, claridad y enfoque estratégico, priorizando la prevención de conflictos y la seguridad jurídica.
               </p>
             </div>
 

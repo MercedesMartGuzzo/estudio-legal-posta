@@ -15,7 +15,7 @@ const LIST_ITEMS = [
   { icon: Clapperboard, text: "Contratos de producción audiovisual y musical" },
   { icon: Cloud, text: "Licencias de contenido para plataformas OTT" },
   { icon: Radio, text: "Regulación de medios de comunicación (ENACOM)" },
-  { icon: Users, text: "Contratos con artistas, actores y creadores" },
+  { icon: Users, text: "Contratos con artistas, actores y creadores de contenido digital." },
   { icon: Megaphone, text: "Acuerdos de patrocinio y publicidad" },
   { icon: Globe, text: "Gestión de derechos en plataformas digitales" },
 ];
@@ -39,7 +39,7 @@ const fadeUp = {
 
 export default function DigitalSectionMedia() {
   return (
-    <section className="mx-auto max-w-[1200px] px-4 py-[120px] md:px-16">
+    <section id="medios-y-entretenimiento" className="mx-auto max-w-[1200px] px-4 py-[120px] md:px-16">
       <motion.div
         initial="hidden"
         whileInView="visible"

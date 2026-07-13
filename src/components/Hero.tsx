@@ -49,9 +49,7 @@ export default function Hero() {
               className="text-base md:text-lg text-[#454240] leading-relaxed"
               variants={itemVariants}
             >
-              Asesoramiento legal de excelencia en derecho comercial, societario, 
-              turismo, medios y propiedad intelectual. Soluciones jurídicas concretas 
-              para personas y empresas en Argentina.
+            Asesoramiento legal de excelencia en derecho comercial, societario, turismo, derecho del entretenimiento, medios y propiedad intelectual. Soluciones jurídicas concretas para personas y empresas en Argentina.
             </motion.p>
 
             {/* CTAs */}

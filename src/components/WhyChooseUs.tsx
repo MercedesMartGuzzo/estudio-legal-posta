@@ -8,25 +8,25 @@ const CARDS = [
     icon: Target,
     title: "Especialización real, no generalismo",
     description:
-      "Nos concentramos en sectores específicos. Eso nos permite conocer en profundidad la regulación, los usos y las problemáticas concretas de cada industria, brindando asesoramiento de mayor calidad y eficiencia.",
+      "Nos concentramos en sectores específicos, conociendo a fondo la regulación y problemáticas de cada industria.",
   },
   {
     icon: MessageSquare,
     title: "Lenguaje claro y accesible",
     description:
-      "Traducimos el derecho a un lenguaje que nuestros clientes puedan entender y aplicar. Explicamos cada decisión, cada riesgo y cada opción de manera transparente, sin tecnicismos innecesarios.",
+      "Traducimos el derecho a un lenguaje transparente y aplicable, sin tecnicismos innecesarios.",
   },
   {
     icon: Zap,
     title: "Respuesta ágil y compromiso real",
     description:
-      "Entendemos que los tiempos del negocio no siempre coinciden con los tiempos judiciales. Respondemos con rapidez, priorizamos la prevención y actuamos con sentido de urgencia cuando la situación lo requiere.",
+      "Actuamos con rapidez y sentido de urgencia, priorizando la prevención de conflictos.",
   },
   {
     icon: HandHeart,
     title: "Acompañamiento a largo plazo",
     description:
-      "No buscamos resolver un problema puntual y desaparecer. Construimos relaciones duraderas con nuestros clientes, funcionando como asesores estratégicos de confianza a lo largo del tiempo.",
+      "Construimos relaciones duraderas generando un asesoramiento estratégico de confianza.",
   },
 ];
 

@@ -8,25 +8,25 @@ const CARDS = [
     icon: BadgeCheck,
     title: "Marcas y Signos Distintivos",
     description:
-      "Registro y renovación ante el INPI, búsqueda de antecedentes, oposiciones, licencias de marca y defensa frente a infracciones.",
+      "Registro y renovación ante el INPI,  búsqueda de antecedentes, oposiciones y licencias.",
   },
   {
     icon: BookOpen,
     title: "Derechos de Autor",
     description:
-      "Registro de obras literarias, artísticas y digitales. Contratos de cesión, licencias, protección de software y contenidos en plataformas digitales.",
+      "Registro de obras literarias, artísticas y digitales. Protección de software.",
   },
   {
     icon: Lightbulb,
     title: "Patentes y Modelos",
     description:
-      "Asesoramiento en patentes de invención, modelos de utilidad y diseños industriales. Trámites ante el INPI y estrategia de protección internacional.",
+      "Patentes de invención, modelos de utilidad y diseños industriales ante el INPI.",
   },
   {
     icon: ShieldOff,
     title: "Secretos Industriales",
     description:
-      "Redacción de acuerdos de confidencialidad (NDA), protección de know-how, información técnica y estrategias de negocio frente a empleados y socios.",
+      "Acuerdos de confidencialidad (NDA) y protección de know-how.",
   },
 ];
 
@@ -37,7 +37,7 @@ const fadeUp = {
 
 export default function IntProperty() {
   return (
-    <section className="mx-auto max-w-[1200px] px-4 py-[120px] md:px-16">
+    <section id="propiedad-intelectual" className="mx-auto max-w-[1200px] px-4 py-[120px] md:px-16">
       <motion.div
         initial="hidden"
         whileInView="visible"

@@ -14,19 +14,19 @@ const FEATURES = [
     icon: FileText,
     title: "Contratos Turísticos",
     description:
-      "Redacción de contratos de paquete turístico, condiciones generales, políticas de cancelación y responsabilidad frente al pasajero.",
+      "Redacción de contratos de paquete turístico, condiciones generales, políticas de cancelación y responsabilidad.",
   },
   {
     icon: Building,
     title: "Alojamientos y Plataformas",
     description:
-      "Marco jurídico para hoteles, apart-hoteles y plataformas digitales de alojamiento. Contratos de intermediación y responsabilidad frente al usuario.",
+      "Marco jurídico para hoteles, apart-hoteles y plataformas digitales de alojamiento.",
   },
   {
     icon: Scale,
     title: "Resolución de Conflictos",
     description:
-      "Representación ante organismos de defensa del consumidor, reclamaciones de pasajeros y litigios vinculados a la prestación de servicios turísticos.",
+      "Defensa del consumidor, reclamaciones de pasajeros y litigios vinculados.",
   },
 ];
 
@@ -37,7 +37,7 @@ const fadeUp = {
 
 export default function TourismSection() {
   return (
-    <section className="mx-auto max-w-[1200px] px-4 py-[120px] md:px-16">
+    <section id="turismo" className="mx-auto max-w-[1200px] px-4 py-[120px] md:px-16">
       <motion.div
         initial="hidden"
         whileInView="visible"
