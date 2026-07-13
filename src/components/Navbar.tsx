@@ -47,8 +47,8 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        isScrolled
-          ? "bg-[var(--background)]/90 backdrop-blur-md border-b border-[var(--border)]"
+        isOpen || isScrolled
+          ? "bg-[var(--background)] border-b border-[var(--border)]"
           : "border-b border-transparent"
       }`}
     >
